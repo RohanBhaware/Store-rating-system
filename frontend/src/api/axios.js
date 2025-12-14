@@ -1,6 +1,8 @@
 import axios from "axios";
+
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || "https://store-rating-system-v9kt.onrender.com"
+  baseURL: import.meta.env.VITE_API_URL 
+    || "https://store-rating-system-v9kt.onrender.com/api"
 });
 
 // attach token
@@ -12,4 +14,5 @@ api.interceptors.request.use(config => {
   }
   return config;
 });
+
 export default api;

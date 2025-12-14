@@ -10,7 +10,7 @@ export default function Stores() {
       const res = await api.get("/stores");
       const list = Array.isArray(res.data) ? res.data : res.data.data;
       setStores(list || []);
-    })();
+    });
   }, []);
 
   return (
